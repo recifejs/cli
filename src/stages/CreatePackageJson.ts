@@ -1,0 +1,32 @@
+import fs from "fs";
+import path from "path";
+
+const createPackageJson = (target: string, name: string) => {
+  const basePackageJson = {
+    name: name,
+    version: "0.0.1",
+    license: "MIT",
+    scripts: {
+      start: "recife start",
+      build: "recife build"
+    },
+    dependencies: {
+      recife: "^0.1.0"
+    },
+    browserslist: {
+      production: [">0.2%", "not dead", "not op_mini all"],
+      development: [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  };
+
+  fs.writeFileSync(
+    path.join(target, "package.json"),
+    JSON.stringify(basePackageJson, null, 2)
+  );
+};
+
+export default createPackageJson;

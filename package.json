@@ -1,0 +1,20 @@
+{
+  "name": "recife-cli",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && dist/Cli.js project my-project-name",
+    "build": "tsc -p ."
+  },
+  "bin": {
+    "recife-cli": "dist/Cli.js"
+  },
+  "dependencies": {
+    "commander": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.11",
+    "typescript": "^3.9.5"
+  }
+}

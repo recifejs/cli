@@ -10,7 +10,46 @@
 <br />
 <br />
 
-[![npm version](https://badge.fury.io/js/recife-cli.svg)](https://www.npmjs.com/package/recife-cli) &bull; [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/recifejs/recife-cli/blob/master/LICENSE) &bull; [![Node.js CI](https://github.com/recifejs/cli/workflows/Node.js%20CI/badge.svg)](https://github.com/recifejs/cli/workflows/Node.js%20CI)
+[![npm version](https://img.shields.io/npm/v/recife-cli?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/recife-cli) [![License: MIT](https://img.shields.io/github/license/recifejs/cli?style=for-the-badge)](https://github.com/recifejs/cli/blob/master/LICENSE) [![Node.js CI](https://img.shields.io/github/workflow/status/recifejs/cli/Node.js%20CI?style=for-the-badge&logo=github)](https://github.com/recifejs/cli/workflows/Node.js%20CI)
+
+</div>
+
+## Quick Overview
+
+**Create new project**
+
+```
+npx recife-cli project my-project-name
+```
+
+**Start the project**
+
+```
+cd my-project-name
+npm start
+```
+
+## How to create a recifejs project?
+
+There are a few ways to create a Recife project.
+
+### Yarn
+
+```
+yarn create recife-cli my-project-name
+```
+
+### NPX
+
+```
+npx recife-cli project my-project-name
+```
+
+### NPM
+
+```
+npm init recife-cli project my-project-name
+```
 
 ## License
 

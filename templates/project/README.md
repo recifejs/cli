@@ -1,18 +1,25 @@
-# Recife JS
+<div align="center">
 
-MVC Framework for GraphQL
+<br />
+<br />
 
-[![npm version](https://badge.fury.io/js/recife.svg)](https://www.npmjs.com/package/recife)
+<img alt="RecifeJs" src="https://raw.githubusercontent.com/recifejs/recife/master/logo.png" />
 
-## Basic Use
+<br />
+<br />
+
+[![npm version](https://img.shields.io/npm/v/recife?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/recife) [![License: MIT](https://img.shields.io/github/license/recifejs/recife?style=for-the-badge)](https://github.com/recifejs/recife/blob/master/LICENSE)
+
+## How to use
 
 ```
-npx recife-cli project my-project-name
-cd my-project-name
+npm install
 npm start
 ```
 
-## How to create a project?
+## How to create a recifejs project?
+
+There are a few ways to create a Recife project.
 
 ### Yarn
 
@@ -31,3 +38,7 @@ npx recife-cli project my-project-name
 ```
 npm init recife-cli project my-project-name
 ```
+
+## License
+
+RecifeJs is open source software [licensed as MIT](https://github.com/recifejs/recife/blob/master/LICENSE).

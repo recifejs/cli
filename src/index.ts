@@ -13,14 +13,16 @@ console.log(`🚀 Version: ${packageJson.version}\n`);
 commander
   .version(packageJson.version, '-v --version', 'Version number')
   .helpOption('-h --help', 'For more information');
-
 commander
   .name(`recife-cli`)
   .command('project', 'Generate a project', {
-    executableFile: './generators/ProjectGenerator.js'
+    executableFile: path.join(__dirname, 'generators/ProjectGenerator.js')
   })
   .command('controller', 'Create a controller', {
-    executableFile: './generators/ControllerGenerator'
+    executableFile: path.join(
+      __dirname,
+      '../dist/generators/ControllerGenerator.js'
+    )
   })
   .allowUnknownOption(false);
 

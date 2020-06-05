@@ -7,8 +7,8 @@ const createPackageJson = (target: string, name: string) => {
     version: '0.0.1',
     license: 'MIT',
     scripts: {
-      start: 'recife start',
-      build: 'recife build'
+      start: 'tsc && recife start',
+      build: 'tsc -p .'
     },
     dependencies: {
       recife: '^0.2.0'

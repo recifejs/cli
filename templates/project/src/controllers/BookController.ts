@@ -1,10 +1,10 @@
-import { Mutation } from 'recife';
+import { Query, Mutation } from 'recife';
 
 import UserModel from '../models/UserModel';
 import { UserForm, UserDelete } from '../inputs/UserInput';
 
 class UserController {
-  @Mutation()
+  @Query()
   getUser(): UserModel {
     const user = new UserModel();
     user.name = 'Quaco Cainr';

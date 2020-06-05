@@ -5,16 +5,17 @@
   "license": "MIT",
   "repository": "https://github.com/recifejs/recife-cli",
   "files": [
+    "bin",
     "dist",
     "templates",
     "README.md"
   ],
   "scripts": {
-    "start": "tsc && node dist/Cli.js project my-project-name",
+    "start": "tsc && node ./bin/recife-cli project my-project-name",
     "build": "tsc -p ."
   },
   "bin": {
-    "recife-cli": "dist/Cli.js"
+    "recife-cli": "./bin/recife-cli"
   },
   "dependencies": {
     "commander": "^5.1.0"

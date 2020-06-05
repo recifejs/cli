@@ -1,8 +1,8 @@
-import { spawnSync } from "child_process";
+import { spawnSync } from 'child_process';
 
 const yarnInstalled = () => {
   try {
-    spawnSync("yarnpkg", ["--version"], { stdio: "ignore" });
+    spawnSync('yarnpkg', ['--version'], { stdio: 'ignore' });
     return true;
   } catch (error) {
     return false;
@@ -16,9 +16,9 @@ const installDependencies = (target: string) => {
     process.chdir(target);
 
     if (yarnInstalled()) {
-      spawnSync("yarnpkg", ["install"], { stdio: "inherit" });
+      spawnSync('yarnpkg', ['install'], { stdio: 'inherit' });
     } else {
-      spawnSync("npm", ["install"], { stdio: "inherit" });
+      spawnSync('npm', ['install'], { stdio: 'inherit' });
     }
   } catch (err) {
     console.log(`\x1b[31m${err}\x1b[0m`);

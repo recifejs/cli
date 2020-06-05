@@ -15,7 +15,7 @@ const installDependencies = (target: string) => {
   try {
     process.chdir(target);
 
-    if (yarnInstalled) {
+    if (yarnInstalled()) {
       spawnSync("yarnpkg", ["install"], { stdio: "inherit" });
     } else {
       spawnSync("npm", ["install"], { stdio: "inherit" });

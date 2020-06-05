@@ -3,16 +3,19 @@
 "use strict";
 
 import commander from "commander";
+import path from "path";
+
+const packageJson = require(path.join(__dirname, "../package.json"));
 
 console.log("\x1b[36mRecife CLI", "\x1b[0m");
-console.log(`🚀 Version: ${require("./package.json").version}\n`);
+console.log(`🚀 Version: ${packageJson.version}\n`);
 
 commander
-  .version(require("../package.json").version, "-v --version", "Version number")
+  .version(packageJson.version, "-v --version", "Version number")
   .helpOption("-h --help", "For more information");
 
 commander
-  .name(`${require("./package.json").name} new`)
+  .name(`recife-cli`)
   .command("project", "Generate a project", {
     executableFile: "./generators/ProjectGenerator"
   })

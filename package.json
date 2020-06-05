@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "tsc && dist/Cli.js project my-project-name",
+    "start": "tsc && node dist/Cli.js project my-project-name",
     "build": "tsc -p ."
   },
   "bin": {

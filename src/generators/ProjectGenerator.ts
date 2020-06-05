@@ -23,6 +23,7 @@ class ProjectGenerator {
       const target = path.join(process.cwd(), projectName);
 
       try {
+        fs.mkdirSync(projectName);
         createPackageJson(target, projectName);
         copyFolder(source, target);
         installDependencies(target);

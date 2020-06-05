@@ -11,7 +11,8 @@ const createPackageJson = (target: string, name: string) => {
       build: 'tsc -p .'
     },
     dependencies: {
-      recife: '^0.2.0'
+      recife: '^0.2.0',
+      typescript: '^3.*'
     },
     browserslist: {
       production: ['>0.2%', 'not dead', 'not op_mini all'],

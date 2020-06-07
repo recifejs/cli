@@ -1,7 +1,7 @@
 export type UserForm = {
-  name: String;
-  email: String;
-  username: String;
+  name: string;
+  email: string;
+  username: string;
 };
 
 export type UserDelete = {

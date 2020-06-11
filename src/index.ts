@@ -30,6 +30,12 @@ commander
       '../dist/generators/ScalarGenerator.js'
     )
   })
+  .command('validator', 'Create a validator', {
+    executableFile: path.join(
+      __dirname,
+      '../dist/generators/ValidatorGenerator.js'
+    )
+  })
   .allowUnknownOption(false);
 
 commander.parse(process.argv);

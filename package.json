@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "start": "tsc && node ./bin/recife-cli project my-project-name",
+    "cli": "tsc && node ./bin/recife-cli",
     "build": "tsc -p ."
   },
   "bin": {

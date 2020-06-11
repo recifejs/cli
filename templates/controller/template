@@ -1,0 +1,9 @@
+import { Query, Mutation } from 'recife';
+
+class [[name]] {
+  constructor() {
+    //
+  }
+}
+
+export default [[name]];

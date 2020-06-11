@@ -1,0 +1,22 @@
+import { Kind, GraphQLError } from 'graphql';
+import ScalarType from 'recife';
+
+const [[scalarName]]: ScalarType = {
+  name: '[[name]]',
+  description: 'A [[name]] scalar',
+  parseValue: value => {
+    return value;
+  },
+  serialize: value => {
+    return value;
+  },
+  parseLiteral: ast => {
+    if (ast.kind !== Kind.STRING) {
+      throw new GraphQLError(`This "${ast}" is not a string`);
+    }
+
+    return ast.value;
+  }
+};
+
+export default [[scalarName]];

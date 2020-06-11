@@ -38,5 +38,5 @@ if (projectName) {
 } else {
   console.error('\x1b[31mSpecify the name project.', '\x1b[0m');
   console.log(`  For example: recife-cli project my-project-name`);
-  console.log(`  Run recife-cli --help for more information\n`);
+  console.log(`  Run --help for more information\n`);
 }

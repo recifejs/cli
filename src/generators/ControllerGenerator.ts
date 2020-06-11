@@ -38,6 +38,6 @@ if (controllerName) {
   }
 } else {
   console.error('\x1b[31mSpecify the name controller.', '\x1b[0m');
-  console.log(`  For example: recife-cli controller UserController`);
-  console.log(`  Run recife-cli --help for more information\n`);
+  console.log(`  For example: recife-cli controller User`);
+  console.log(`  Run --help for more information\n`);
 }

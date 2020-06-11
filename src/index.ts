@@ -24,6 +24,12 @@ commander
       '../dist/generators/ControllerGenerator.js'
     )
   })
+  .command('scalar', 'Create a scalar', {
+    executableFile: path.join(
+      __dirname,
+      '../dist/generators/ScalarGenerator.js'
+    )
+  })
   .allowUnknownOption(false);
 
 commander.parse(process.argv);

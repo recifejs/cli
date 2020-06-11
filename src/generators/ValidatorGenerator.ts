@@ -29,7 +29,7 @@ if (validatorName) {
     const contentFile = fs.readFileSync(source).toString();
     fs.writeFileSync(target, replaceMask(contentFile, { name: validatorName }));
 
-    console.info(`\x1b[36mCreating a validator ${validatorName}`, '\x1b[0m');
+    console.info(`\x1b[36mCreating the validator ${validatorName}.`, '\x1b[0m');
     console.info(`Path: ${target}`, '\x1b[0m\n');
   } catch (err) {
     console.log(`\x1b[31m${err}\x1b[0m`);

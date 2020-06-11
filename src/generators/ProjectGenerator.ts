@@ -33,7 +33,7 @@ if (projectName) {
     installDependencies(target);
     initializeGit(projectName);
 
-    console.info(`\x1b[36mCreating a project ${projectName}`, '\x1b[0m');
+    console.info(`\x1b[36mCreating the project ${projectName}.`, '\x1b[0m');
     console.info(`Path: ${target}`, '\x1b[0m\n');
   } catch (err) {
     console.log(`\x1b[31m${err}\x1b[0m`);

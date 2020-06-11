@@ -1,0 +1,8 @@
+import { Type } from 'recife';
+
+@Type()
+class [[name]] {
+  id?: String;
+}
+
+export default [[name]];

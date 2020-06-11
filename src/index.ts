@@ -36,6 +36,9 @@ commander
       '../dist/generators/ValidatorGenerator.js'
     )
   })
+  .command('model', 'Create a model', {
+    executableFile: path.join(__dirname, '../dist/generators/ModelGenerator.js')
+  })
   .allowUnknownOption(false);
 
 commander.parse(process.argv);

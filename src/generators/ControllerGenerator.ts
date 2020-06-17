@@ -5,13 +5,6 @@ import capitalize from '../utils/capitalize';
 import replaceMask from '../utils/replaceMask';
 import Log from '../Log';
 
-commander
-  .name(`recife-cli controller`)
-  .arguments('<controller-name>')
-  .action(name => createController(name))
-  .allowUnknownOption(false)
-  .parse(process.argv);
-
 const createController = (name: string) => {
   if (name) {
     Log.Instance.infoHeap(`Creating the controller`);
@@ -28,7 +21,7 @@ const createController = (name: string) => {
       fs.writeFileSync(target, replaceMask(contentFile, { name }));
 
       Log.Instance.successHeap(`The controller ${name} created.`);
-      Log.Instance.info(`Path: ${target}`);
+      Log.Instance.info(`Path: ${target}\n\n`);
     } catch (err) {
       Log.Instance.exception(err);
     }
@@ -39,3 +32,10 @@ const createController = (name: string) => {
     );
   }
 };
+
+commander
+  .name(`recife-cli controller`)
+  .arguments('<controller-name>')
+  .action(name => createController(name))
+  .allowUnknownOption(false)
+  .parse(process.argv);

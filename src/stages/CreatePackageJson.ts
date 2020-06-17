@@ -1,7 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import Log from '../Log';
 
 const createPackageJson = (target: string, name: string) => {
+  Log.Instance.infoHeap(`Creating file package.json`);
+
   const basePackageJson = {
     name: name,
     version: '0.0.1',

@@ -20,7 +20,7 @@ const createController = (name: string) => {
       const contentFile = fs.readFileSync(source).toString();
       fs.writeFileSync(target, replaceMask(contentFile, { name }));
 
-      Log.Instance.successHeap(`The controller ${name} created.`);
+      Log.Instance.successHeap(`The ${name} controller was created.`);
       Log.Instance.info(`Path: ${target}\n\n`);
     } catch (err) {
       Log.Instance.exception(err);

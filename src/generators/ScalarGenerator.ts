@@ -25,7 +25,7 @@ const createScalar = (name: string) => {
         })
       );
 
-      Log.Instance.successHeap(`The scalar ${name} created.`);
+      Log.Instance.successHeap(`The ${name} scalar was created.`);
       Log.Instance.info(`Path: ${target}\n\n`);
     } catch (err) {
       Log.Instance.exception(err);

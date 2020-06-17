@@ -10,7 +10,6 @@ const createValidator = (name: string) => {
     Log.Instance.infoHeap(`Creating the validator`);
 
     name = capitalize(name.replace(/Validator|\.ts|\.js/g, ''));
-
     name += 'Validator';
 
     const source = path.join(__dirname, '/../../templates/validator/template');

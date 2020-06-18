@@ -4,11 +4,11 @@
 
 import commander from 'commander';
 import path from 'path';
+import Log from './Log';
 
 const packageJson = require(path.join(__dirname, '../package.json'));
 
-console.log('\x1b[36mRecife CLI', '\x1b[0m');
-console.log(`🚀 Version: ${packageJson.version}\n`);
+Log.Instance.title(`RecifeJs CLI`);
 
 commander
   .version(packageJson.version, '-v --version', 'Version number')

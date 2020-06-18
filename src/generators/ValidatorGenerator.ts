@@ -3,39 +3,38 @@ import path from 'path';
 import commander from 'commander';
 import capitalize from '../utils/capitalize';
 import replaceMask from '../utils/replaceMask';
+import Log from '../Log';
 
-let validatorName: string = '';
+const createValidator = (name: string) => {
+  if (name) {
+    Log.Instance.infoHeap(`Creating the validator`);
+
+    name = capitalize(name.replace(/Validator|\.ts|\.js/g, ''));
+    name += 'Validator';
+
+    const source = path.join(__dirname, '/../../templates/validator/template');
+    const target = path.join(process.cwd(), 'src/validators', `${name}.ts`);
+
+    try {
+      const contentFile = fs.readFileSync(source).toString();
+      fs.writeFileSync(target, replaceMask(contentFile, { name }));
+
+      Log.Instance.successHeap(`The ${name} validator was created.`);
+      Log.Instance.info(`Path: ${target}\n\n`);
+    } catch (err) {
+      Log.Instance.exception(err);
+    }
+  } else {
+    Log.Instance.errorHeap(`Specify the name validator.`);
+    Log.Instance.info(
+      `For example: recife-cli validator User\nRun --help for more information`
+    );
+  }
+};
 
 commander
   .name(`recife-cli validator`)
   .arguments('<validator-name>')
-  .action(name => (validatorName = name))
+  .action(name => createValidator(name))
   .allowUnknownOption(false)
   .parse(process.argv);
-
-if (validatorName) {
-  validatorName = capitalize(validatorName.replace(/Validator|\.ts|\.js/g, ''));
-
-  validatorName += 'Validator';
-
-  const source = path.join(__dirname, '/../../templates/validator/template');
-  const target = path.join(
-    process.cwd(),
-    'src/validators',
-    `${validatorName}.ts`
-  );
-
-  try {
-    const contentFile = fs.readFileSync(source).toString();
-    fs.writeFileSync(target, replaceMask(contentFile, { name: validatorName }));
-
-    console.info(`\x1b[36mCreating the validator ${validatorName}.`, '\x1b[0m');
-    console.info(`Path: ${target}`, '\x1b[0m\n');
-  } catch (err) {
-    console.log(`\x1b[31m${err}\x1b[0m`);
-  }
-} else {
-  console.error('\x1b[31mSpecify the name validator.', '\x1b[0m');
-  console.log(`  For example: recife-cli validator User`);
-  console.log(`  Run --help for more information\n`);
-}

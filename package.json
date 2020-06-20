@@ -3,6 +3,7 @@
   "version": "0.2.1",
   "description": "CLI for RecifeJs",
   "license": "MIT",
+  "homepage": "https://recifejs.org/",
   "repository": "https://github.com/recifejs/recife-cli",
   "files": [
     "bin",

@@ -16,7 +16,8 @@ const createPackageJson = (target: string, name: string) => {
     },
     dependencies: {
       recife: '^0.6.0',
-      typescript: '^3.*'
+      typescript: '^3.*',
+      'recife-koa': '^0.1.0'
     },
     browserslist: {
       production: ['>0.2%', 'not dead', 'not op_mini all'],

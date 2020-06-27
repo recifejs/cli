@@ -1,51 +1,58 @@
-<div align="center">
+<img alt="RecifeJs" width="400" src="https://raw.githubusercontent.com/recifejs/recife/master/logo.png" />
 
-<img alt="RecifeJs" src="https://raw.githubusercontent.com/recifejs/recife/master/logo.png" />
+[![npm version](https://img.shields.io/npm/v/recife-cli?style=flat-square&logo=npm)](https://www.npmjs.com/package/recife-cli) [![License: MIT](https://img.shields.io/github/license/recifejs/cli?style=flat-square)](https://github.com/recifejs/cli/blob/master/LICENSE) [![Node.js CI](https://img.shields.io/github/workflow/status/recifejs/cli/Node.js%20CI?style=flat-square&logo=github)](https://github.com/recifejs/cli/workflows/Node.js%20CI)
 
-<br />
-<br />
+CLI(Command-line interface) for RecifeJs.
 
-<h1>CLI(Command-line interface)</h1>
+## Install
 
-<br />
-<br />
-
-[![npm version](https://img.shields.io/npm/v/recife-cli?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/recife-cli) [![License: MIT](https://img.shields.io/github/license/recifejs/cli?style=for-the-badge)](https://github.com/recifejs/cli/blob/master/LICENSE) [![Node.js CI](https://img.shields.io/github/workflow/status/recifejs/cli/Node.js%20CI?style=for-the-badge&logo=github)](https://github.com/recifejs/cli/workflows/Node.js%20CI)
-
-</div>
+```bash
+npm install recife-cli
+# or
+yarn add recife-cli
+```
 
 ## Quick Overview
 
+RecifeJs CLI offers a variety of options to further accelerate development within the framework. For more details visit the [documentation link](https://recifejs.org/docs/introduction-cli).
+
+See below some usage options:
+
 **Create new project**
 
-```
-npx recife-cli project my-project-name
-```
-
-**Start the project**
-
-```
-cd my-project-name
-npm start
+```bash
+recife project my-project-name
 ```
 
-## How to create a recifejs project?
+**Create new controller**
 
-There are a few ways to create a Recife project.
+```bash
+recife controller User
+```
 
-### Yarn
+**Create new model**
+
+```bash
+recife model User
+```
+
+## Ways to use
+
+See some other ways to use the RecifeJS CLI.
+
+### With Yarn
 
 ```
 yarn create recife-cli my-project-name
 ```
 
-### NPX
+### With NPX
 
 ```
 npx recife-cli project my-project-name
 ```
 
-### NPM
+### With NPM
 
 ```
 npm init recife-cli project my-project-name

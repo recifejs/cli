@@ -15,7 +15,7 @@ const createPackageJson = (target: string, name: string) => {
       build: 'recife build'
     },
     dependencies: {
-      recife: '^0.6.0',
+      recife: '^0.7.0',
       typescript: '^3.*',
       'recife-koa': '^0.1.0'
     },

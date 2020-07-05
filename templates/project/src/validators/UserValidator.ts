@@ -1,4 +1,4 @@
-import { UserInputError } from 'apollo-server-koa';
+import { UserInputError } from 'apollo-server-core';
 import { UserForm } from '../inputs/UserInput';
 
 class UserValidator {

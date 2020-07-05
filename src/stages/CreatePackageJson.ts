@@ -2,10 +2,20 @@ import fs from 'fs';
 import path from 'path';
 import Log from '../Log';
 
-const createPackageJson = (target: string, name: string) => {
+const versions = {
+  koa: '^0.1.0',
+  express: '^0.1.0',
+  hapi: '^0.1.0'
+};
+
+const createPackageJson = (
+  target: string,
+  name: string,
+  httpFramework: 'koa' | 'express' | 'hapi'
+) => {
   Log.Instance.infoHeap(`Creating file package.json`);
 
-  const basePackageJson = {
+  let basePackageJson: any = {
     name: name,
     version: '0.0.1',
     license: 'MIT',
@@ -16,8 +26,7 @@ const createPackageJson = (target: string, name: string) => {
     },
     dependencies: {
       recife: '^0.7.0',
-      typescript: '^3.*',
-      'recife-koa': '^0.1.0'
+      typescript: '^3.*'
     },
     browserslist: {
       production: ['>0.2%', 'not dead', 'not op_mini all'],
@@ -28,6 +37,9 @@ const createPackageJson = (target: string, name: string) => {
       ]
     }
   };
+
+  basePackageJson.dependencies[`recife-${httpFramework}`] =
+    versions[httpFramework];
 
   fs.writeFileSync(
     path.join(target, 'package.json'),

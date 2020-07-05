@@ -1,16 +1,10 @@
 import { spawnSync } from 'child_process';
 import Log from '../Log';
 
-const yarnInstalled = () => {
-  try {
-    spawnSync('yarnpkg', ['--version'], { stdio: 'ignore' });
-    return true;
-  } catch (error) {
-    return false;
-  }
-};
-
-const installDependencies = (target: string) => {
+const installDependencies = (
+  target: string,
+  packageManager: 'yarn' | 'npm'
+) => {
   Log.Instance.infoHeap(`Installing dependencies`);
 
   const originalDirectory = process.cwd();
@@ -18,7 +12,7 @@ const installDependencies = (target: string) => {
   try {
     process.chdir(target);
 
-    if (yarnInstalled()) {
+    if (packageManager === 'yarn') {
       spawnSync('yarnpkg', ['install'], { stdio: 'ignore' });
     } else {
       spawnSync('npm', ['install'], { stdio: 'ignore' });

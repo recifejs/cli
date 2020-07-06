@@ -1,20 +1,12 @@
-<div align="center">
+<img alt="RecifeJs" width="400" src="https://raw.githubusercontent.com/recifejs/recife/master/logo.png" />
 
-<br />
-<br />
-
-<img alt="RecifeJs" src="https://raw.githubusercontent.com/recifejs/recife/master/logo.png" />
-
-<br />
-<br />
-
-[![npm version](https://img.shields.io/npm/v/recife?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/recife) [![License: MIT](https://img.shields.io/github/license/recifejs/recife?style=for-the-badge)](https://github.com/recifejs/recife/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/recife?style=flat-square&logo=npm)](https://www.npmjs.com/package/recife) [![License: MIT](https://img.shields.io/github/license/recifejs/recife?style=flat-square)](https://github.com/recifejs/recife/blob/master/LICENSE)
 
 ## How to use
 
 ```
 npm install
-npm start
+npm server
 ```
 
 ## How to create a recifejs project?

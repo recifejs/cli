@@ -13,7 +13,7 @@ import Log from '../Log';
 const createProject = (
   projectName: string,
   packageManager: 'yarn' | 'npm',
-  httpFramework: 'koa' | 'express' | 'hapi'
+  httpFramework: 'koa' | 'express' | 'hapi' | 'fastify'
 ) => {
   Log.Instance.infoHeap(`Creating the project`);
 
@@ -66,7 +66,7 @@ const createProjectWithOptions = () => {
         message: 'Http Framework:',
         type: 'list',
         default: 'koa',
-        choices: ['koa', 'express', 'hapi']
+        choices: ['koa', 'express', 'hapi', 'fastify']
       }
     ])
     .then((answers: any) => {

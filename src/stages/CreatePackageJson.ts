@@ -5,13 +5,14 @@ import Log from '../Log';
 const versions = {
   koa: '^0.1.0',
   express: '^0.1.0',
-  hapi: '^0.1.0'
+  hapi: '^0.1.0',
+  fastify: '^0.1.0'
 };
 
 const createPackageJson = (
   target: string,
   name: string,
-  httpFramework: 'koa' | 'express' | 'hapi'
+  httpFramework: 'koa' | 'express' | 'hapi' | 'fastify'
 ) => {
   Log.Instance.infoHeap(`Creating file package.json`);
 

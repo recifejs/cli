@@ -17,7 +17,7 @@
     "build": "tsc -p ."
   },
   "bin": {
-    "recife-cli": "./bin/recife-cli"
+    "recife": "./bin/recife-cli"
   },
   "dependencies": {
     "commander": "^5.1.0",
